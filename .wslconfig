@@ -1,0 +1,9 @@
+[wsl2]
+debugConsole=true
+memory=8GB                  # Enough for Docker/PostHog while leaving RAM for Windows
+swap=6GB                    # More generous swap for safety on heavy builds
+localhostForwarding=true    # Access Linux services from Windows at localhost
+nestedVirtualization=true   # Needed for Docker-in-Docker, CI/CD pipelines
+dnsTunneling=true           # Fixes DNS resolution/networking issues
+
+#after making any change restart the wsl by opening the cmd as administration --> wsl --shutdown 
